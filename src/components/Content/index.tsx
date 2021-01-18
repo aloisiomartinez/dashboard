@@ -4,12 +4,9 @@ import logoImg from '../../assets/logo.svg';
 
 import * as S from './styles';
 
-const Content: React.FC = () => {
-  return (
-    <S.Container>
-      <h1>Dashboard</h1>
-    </S.Container>
-  );
+// eslint-disable-next-line react/prop-types
+const Content: React.FC = ({ children }) => {
+  return <S.Container>{children}</S.Container>;
 };
 
 export default Content;
