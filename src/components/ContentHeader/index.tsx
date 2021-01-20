@@ -11,7 +11,6 @@ interface IContentHeaderProps {
   children: React.ReactNode;
 }
 
-// eslint-disable-next-line react/prop-types
 const ContentHeader: React.FC<IContentHeaderProps> = ({ title, lineColor, children }) => {
   return (
     <S.Container>

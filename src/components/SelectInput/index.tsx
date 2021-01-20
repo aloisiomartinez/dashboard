@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 
 import * as S from './styles';
@@ -10,7 +9,6 @@ interface ISelectInputProps {
   }[];
 }
 
-// eslint-disable-next-line react/prop-types
 const SelectInput: React.FC<ISelectInputProps> = ({ options }) => (
   <S.Container>
     <select>

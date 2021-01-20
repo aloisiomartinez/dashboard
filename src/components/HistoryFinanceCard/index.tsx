@@ -11,7 +11,6 @@ interface IHistoryFinanceCardProps {
   amount: string;
 }
 
-// eslint-disable-next-line react/prop-types
 const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({ tagColor, title, subTitle, amount }) => {
   return (
     <S.Container>

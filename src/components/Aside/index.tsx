@@ -13,15 +13,15 @@ const Content: React.FC = () => {
       </S.Header>
 
       <S.MenuContainer>
-        <S.MenuItemLink href='#'>
+        <S.MenuItemLink href='/dashboard'>
           <MdDashboard />
           Dashboard
         </S.MenuItemLink>
-        <S.MenuItemLink href='#'>
+        <S.MenuItemLink href='/list/entry-balance'>
           <MdArrowUpward />
           Entradas
         </S.MenuItemLink>
-        <S.MenuItemLink href='#'>
+        <S.MenuItemLink href='/list/exit-balance'>
           <MdArrowDownward />
           Saidas
         </S.MenuItemLink>
