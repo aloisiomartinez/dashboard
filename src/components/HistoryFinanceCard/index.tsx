@@ -5,7 +5,6 @@ import logoImg from '../../assets/logo.svg';
 import * as S from './styles';
 
 interface IHistoryFinanceCardProps {
-  cardColor: string;
   tagColor: string;
   title: string;
   subTitle: string;
@@ -13,9 +12,9 @@ interface IHistoryFinanceCardProps {
 }
 
 // eslint-disable-next-line react/prop-types
-const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({ cardColor, tagColor, title, subTitle, amount }) => {
+const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({ tagColor, title, subTitle, amount }) => {
   return (
-    <S.Container color={cardColor}>
+    <S.Container>
       <S.Tag color={tagColor} />
       <div>
         <span>{title}</span>

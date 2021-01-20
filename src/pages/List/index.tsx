@@ -7,28 +7,54 @@ import HistoryFinanceCard from '../../components/HistoryFinanceCard';
 import * as S from './styles';
 
 const List: React.FC = () => {
-  const options = [
+  const months = [
     {
-      value: 'Rodrigo',
-      label: 'Rodrigo',
+      value: 7,
+      label: 'Julho',
     },
     {
-      value: 'Rodrigo',
-      label: 'Rodrigo',
+      value: 8,
+      label: 'Agosto',
     },
     {
-      value: 'Rodrigo',
-      label: 'Rodrigo',
+      value: 9,
+      label: 'Setembro',
+    },
+  ];
+
+  const years = [
+    {
+      value: 2020,
+      label: 2020,
+    },
+    {
+      value: 2019,
+      label: 2019,
+    },
+    {
+      value: 2018,
+      label: 2018,
     },
   ];
   return (
     <S.Container>
       <ContentHeader title='Saidas' lineColor='#E44C4E'>
-        <SelectInput options={options} />
+        <SelectInput options={months} />
+        <SelectInput options={years} />
       </ContentHeader>
 
+      <S.Filters>
+        <button type='button' className='tag-filter tag-filter-recurrent'>
+          Recorrentes
+        </button>
+
+        <button type='button' className='tag-filter tag-filter-eventual'>
+          Eventuais
+        </button>
+      </S.Filters>
+
       <S.Content>
-        <HistoryFinanceCard cardColor='#313862' tagColor='#E44C4E' title='Conta de Luz' subTitle='27/07/2020' amount='R$ 130,00' />
+        <HistoryFinanceCard tagColor='#E44C4E' title='Conta de Luz' subTitle='27/07/2020' amount='R$ 130,00' />
       </S.Content>
     </S.Container>
   );
