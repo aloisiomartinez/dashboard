@@ -62,6 +62,26 @@ const Dashboard: React.FC = () => {
     });
   }, []);
 
+  const totalExpenses = useMemo(() => {
+    let total = 0;
+
+    expenses.forEach(item => {
+      const date = new Date(item.date);
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+
+      if (month === monthSelected && year === yearSelected) {
+        try {
+          total += Number(item.amount);
+        } catch (error) {
+          throw new Error('Invalid amount! Amount must be number.');
+        }
+      }
+    });
+
+    return total;
+  }, [monthSelected, yearSelected]);
+
   const handleMonthSelected = (month: string) => {
     try {
       const parseMonth = Number(month);
@@ -88,18 +108,18 @@ const Dashboard: React.FC = () => {
       </ContentHeader>
 
       <S.Content>
-        <WalletBox title='saldo' color='#4E41F0' amount={150.0} footerLabel='atualizado com base nas entradas e saídas ' icon='dolar' />
+        <WalletBox title='Saldo' color='#4E41F0' amount={5000.0} footerLabel='atualizado com base nas entradas e saídas ' icon='dolar' />
         <WalletBox
-          title='entradas'
+          title='Entradas'
           color='#F7931B'
           amount={5000.0}
           footerLabel='atualizado com base nas entradas e saídas '
           icon='arrowUp'
         />
         <WalletBox
-          title='saídas'
+          title='Saídas'
           color='#E44C4E'
-          amount={4850.0}
+          amount={totalExpenses}
           footerLabel='atualizado com base nas entradas e saídas '
           icon='arrowDown'
         />
