@@ -19,8 +19,8 @@ const PieChartBox: React.FC<IPieChartProps> = ({ data }) => (
       <S.LegendContainer>
         {data.map(indicator => (
           <S.Legend key={indicator.name} color={indicator.color}>
-            <div>{indicator.percent}</div>
-            <span>{indicator.name}</span>
+            <div>{indicator.percent}%</div>
+            <span>{indicator.name}%</span>
           </S.Legend>
         ))}
       </S.LegendContainer>
