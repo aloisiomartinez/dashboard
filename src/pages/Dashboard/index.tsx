@@ -4,6 +4,7 @@ import ContentHeader from '../../components/ContentHeader';
 import SelectInput from '../../components/SelectInput';
 import WalletBox from '../../components/WalletBox';
 import MessageBox from '../../components/MessageBox';
+import PieChartBox from '../../components/PieChartBox';
 
 import expenses from '../../repositories/expenses';
 import gains from '../../repositories/gains';
@@ -13,27 +14,11 @@ import happyImg from '../../assets/happy.svg';
 import sadImg from '../../assets/sad.svg';
 import grinningImg from '../../assets/grinning.svg';
 
-import List from '../List';
 import * as S from './styles';
 
 const Dashboard: React.FC = () => {
   const [monthSelected, setMonthSelected] = useState<number>(new Date().getMonth() + 1);
   const [yearSelected, setYearSelected] = useState<number>(new Date().getFullYear() - 1);
-
-  const options = [
-    {
-      value: 'Rodrigo',
-      label: 'Rodrigo',
-    },
-    {
-      value: 'Rodrigo',
-      label: 'Rodrigo',
-    },
-    {
-      value: 'Rodrigo',
-      label: 'Rodrigo',
-    },
-  ];
 
   const months = useMemo(() => {
     return listOfMonths.map((month, index) => {
@@ -182,6 +167,8 @@ const Dashboard: React.FC = () => {
         />
 
         <MessageBox title={message.title} description={message.description} footerText={message.footerText} icon={message.icon} />
+
+        <PieChartBox />
       </S.Content>
     </S.Container>
   );
