@@ -38,7 +38,7 @@ const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => (
               <Cell key={indicator.name} fill={indicator.color} cursor='pointer' />
             ))}
           </Bar>
-          <Tooltip cursor={{ fill: 'none' }} formatter={(value: any) => formatCurrency(Number(value))} />
+          <Tooltip cursor={{ fill: 'none' }} formatter={(value: number) => formatCurrency(Number(value))} />
         </BarChart>
       </ResponsiveContainer>
     </S.SideRight>
