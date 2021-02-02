@@ -1,10 +1,15 @@
 import React from 'react';
 import { MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp } from 'react-icons/md';
+
 import logoImg from '../../assets/logo.svg';
+
+import { useAuth } from '../../hooks/auth';
 
 import * as S from './styles';
 
 const Content: React.FC = () => {
+  const { signOut } = useAuth();
+
   return (
     <S.Container>
       <S.Header>
@@ -13,7 +18,7 @@ const Content: React.FC = () => {
       </S.Header>
 
       <S.MenuContainer>
-        <S.MenuItemLink href='/dashboard'>
+        <S.MenuItemLink href='/'>
           <MdDashboard />
           Dashboard
         </S.MenuItemLink>
@@ -25,9 +30,9 @@ const Content: React.FC = () => {
           <MdArrowDownward />
           Saidas
         </S.MenuItemLink>
-        <S.MenuItemLink href='#'>
+        <S.MenuItemButton onClick={signOut}>
           <MdExitToApp /> Sair
-        </S.MenuItemLink>
+        </S.MenuItemButton>
       </S.MenuContainer>
     </S.Container>
   );
