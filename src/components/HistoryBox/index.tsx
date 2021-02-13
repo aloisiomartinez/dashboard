@@ -25,7 +25,7 @@ const HistoryBox: React.FC<IHistoryBoxProps> = ({ data, lineColorAmountEntry, li
         </S.Legend>
         <S.Legend color={lineColorAmountOutput}>
           <div />
-          <span>Entradas</span>
+          <span>Saidas</span>
         </S.Legend>
       </S.LegendContainer>
     </S.Header>
