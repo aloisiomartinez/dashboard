@@ -1,10 +1,11 @@
 
-
-![Captura de tela de 2021-02-26 16-38-12](https://user-images.githubusercontent.com/41764501/109347130-69582300-7851-11eb-9024-3d7a9cb54398.png)
+# Dashboard Financeiro 
 
 Dashboard desenvolvido em **ReactJs** com **TypeScript** inteiramente componentizado com **componentes puros**.
 Não há banco de dados. Os dados são carregados de 2 arquivos que contém arrays simulando os repositórios de dados.
 
+### Screenshot :computer:
+![Captura de tela de 2021-02-26 16-38-12](https://user-images.githubusercontent.com/41764501/109347130-69582300-7851-11eb-9024-3d7a9cb54398.png)
 
 ### Layout & Componentes Responsivos
 
