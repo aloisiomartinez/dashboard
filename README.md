@@ -1,7 +1,5 @@
 
 
-
-![loginDash](https://user-images.githubusercontent.com/41764501/109347009-3f9efc00-7851-11eb-81fd-39bd87c0b192.png)
 ![Captura de tela de 2021-02-26 16-38-12](https://user-images.githubusercontent.com/41764501/109347130-69582300-7851-11eb-9024-3d7a9cb54398.png)
 
 Dashboard desenvolvido em **ReactJs** com **TypeScript** inteiramente componentizado com **componentes puros**.
